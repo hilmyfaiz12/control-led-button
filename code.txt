@@ -1,17 +1,17 @@
-const int led1 = 8;
-const int button1 = 2;
+const int LED1_PIN = 8;
+const int LED2_PIN = 9;
+const int BUTTON1_PIN = 2;
+const int BUTTON2_PIN = 3;
 
 void setup() {
-  pinMode(led1, OUTPUT);
-  pinMode(button1, INPUT_PULLUP);
+  pinMode(LED1_PIN, OUTPUT);
+  pinMode(LED2_PIN, OUTPUT);
+  pinMode(BUTTON1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON2_PIN, INPUT_PULLUP);
 }
 
 void loop() {
-  int buttonState = digitalRead(button1);
-
-  if (buttonState == LOW) {
-    digitalWrite(led1, HIGH);
-  } else {
-    digitalWrite(led1, LOW);
-  }
+  // INPUT_PULLUP: tombol ditekan = LOW
+  digitalWrite(LED1_PIN, digitalRead(BUTTON1_PIN) == LOW ? HIGH : LOW);
+  digitalWrite(LED2_PIN, digitalRead(BUTTON2_PIN) == LOW ? HIGH : LOW);
 }
