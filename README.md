@@ -3,15 +3,15 @@
 ## Deskripsi
 
 Project Arduino Uno untuk mengontrol
-dua LED menggunakan dua push button.
+tiga LED menggunakan tiga push button.
 Setiap push button mengontrol satu LED secara independen.
 
 ## Hardware
 
 - Arduino Uno
-- 2 LED (merah dan hijau)
-- 2 Push Button
-- 2 Resistor 220 Ohm
+- 3 LED (merah, hijau, dan biru)
+- 3 Push Button
+- 3 Resistor 220 Ohm
 - Breadboard
 - Jumper Wire
 
@@ -21,10 +21,12 @@ Setiap push button mengontrol satu LED secara independen.
 |----------|------|
 | LED 1    | D8   |
 | LED 2    | D9   |
+| LED 3    | D10  |
 | Button 1 | D2   |
 | Button 2 | D3   |
+| Button 3 | D4   |
 
-Kedua push button menggunakan mode `INPUT_PULLUP`,
+Ketiga push button menggunakan mode `INPUT_PULLUP`,
 sehingga satu kaki tombol dihubungkan ke pin digital
 dan kaki lainnya ke GND.
 
@@ -34,12 +36,14 @@ dan kaki lainnya ke GND.
   Ketika dilepas, LED 1 mati.
 - Ketika Button 2 ditekan, LED 2 menyala.
   Ketika dilepas, LED 2 mati.
-- Kedua tombol dapat ditekan bersamaan,
-  sehingga kedua LED menyala bersamaan.
+- Ketika Button 3 ditekan, LED 3 menyala.
+  Ketika dilepas, LED 3 mati.
+- Tombol dapat ditekan bersamaan,
+  sehingga beberapa LED dapat menyala bersamaan.
 
 ## Simulasi
 
-https://wokwi.com/projects/481659647632291841
+https://wokwi.com/projects/481660578709293057
 
 ## Software
 
